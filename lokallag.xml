@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lokallag
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="lokallag.xsd">
+
+    <lagnavn>Tromsø Foto- og Filmklubb</lagnavn>
+    <møtelokale>
+        <gateadresse>Storgata 12</gateadresse>
+        <postnummer>9008</postnummer>
+        <poststed>Tromsø</poststed>
+    </møtelokale>
+
+    <leder>
+        <fornavn>Anne</fornavn>
+        <etternavn>Olsen</etternavn>
+    </leder>
+
+    <medlemmer>
+        <medlem mId="1001">
+            <navn>
+                <fornavn>Kari</fornavn>
+                <etternavn>Nordmann</etternavn>
+            </navn>
+            <kontakt>
+                <telefon>90011223</telefon>
+                <epost>kari@example.com</epost>
+            </kontakt>
+            <adresse>
+                <gateadresse>Blåveisveien 5</gateadresse>
+                <postnummer>9008</postnummer>
+                <poststed>Tromsø</poststed>
+            </adresse>
+            <status>aktiv</status>
+            <medlemsavgift>
+                <år betalt="true" betalingsdato="2024-02-15">2026</år>
+                <år betalt="true" betalingsdato="2023-01-30">2025</år>
+                <år betalt="false">2024</år>
+            </medlemsavgift>
+        </medlem>
+
+        <medlem mId="1002">
+            <navn>
+                <fornavn>Petter</fornavn>
+                <etternavn>Hansen</etternavn>
+            </navn>
+            <kontakt>
+                <telefon>41234567</telefon>
+            </kontakt>
+            <adresse>
+                <gateadresse>Solhøgda 3</gateadresse>
+                <postnummer>9020</postnummer>
+                <poststed>Tromsø</poststed>
+            </adresse>
+            <status>aktiv</status>
+            <medlemsavgift>
+                <år betalt="true" betalingsdato="2024-03-01">2026</år>
+                <år betalt="true" betalingsdato="2023-02-28">2025</år>
+                <år betalt="true" betalingsdato="2022-04-10">2024</år>
+            </medlemsavgift>
+        </medlem>
+
+        <medlem mId="1003">
+            <navn>
+                <fornavn>Lisa</fornavn>
+                <etternavn>Johansen</etternavn>
+            </navn>
+            <kontakt>
+                <epost>lisa@example.org</epost>
+            </kontakt>
+            <adresse>
+                <gateadresse>Fjelltoppen 9</gateadresse>
+                <postnummer>9015</postnummer>
+                <poststed>Tromsø</poststed>
+            </adresse>
+            <status>inaktiv</status>
+            <medlemsavgift>
+                <år betalt="false">2026</år>
+                <år betalt="false">2025</år>
+                <år betalt="true" betalingsdato="2022-12-15">2024</år>
+            </medlemsavgift>
+        </medlem>
+    </medlemmer>
+</lokallag>

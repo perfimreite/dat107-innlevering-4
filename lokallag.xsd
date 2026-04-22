@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="lokallag" type="LokallagType"/>
+
+    <xs:complexType name="LokallagType">
+        <xs:sequence>
+            <xs:element name="lagnavn" type="xs:string"/>
+            <xs:element name="møtelokale" type="AdresseType"/>
+            <xs:element name="leder" type="NavnType"/>
+            <xs:element name="medlemmer" type="MedlemmerType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AdresseType">
+        <xs:sequence>
+            <xs:element name="gateadresse" type="xs:string"/>
+            <xs:element name="postnummer" type="PostnummerType"/>
+            <xs:element name="poststed" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="PostnummerType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="NavnType">
+        <xs:sequence>
+            <xs:element name="fornavn" type="xs:string"/>
+            <xs:element name="etternavn" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MedlemmerType">
+        <xs:sequence>
+            <xs:element name="medlem" maxOccurs="unbounded" type="MedlemType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MedlemType">
+        <xs:sequence>
+            <xs:element name="navn" type="NavnType"/>
+            <xs:element name="kontakt" type="KontaktType"/>
+            <xs:element name="adresse" type="AdresseType"/>
+            <xs:element name="status" type="StatusType"/>
+            <xs:element name="medlemsavgift" type="MedlemsavgiftType"/>
+        </xs:sequence>
+        <xs:attribute name="mId" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="KontaktType">
+        <xs:choice minOccurs="1" maxOccurs="2">
+            <xs:element name="telefon" type="xs:string"/>
+            <xs:element name="epost" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:simpleType name="StatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="aktiv"/>
+            <xs:enumeration value="inaktiv"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="MedlemsavgiftType">
+        <xs:sequence>
+            <xs:element name="år" maxOccurs="unbounded" type="ÅrType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ÅrType">
+        <xs:simpleContent>
+            <xs:extension base="ÅrVerdiType">
+                <xs:attribute name="betalt" type="xs:boolean" use="required"/>
+                <xs:attribute name="betalingsdato" type="xs:date"    use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ÅrVerdiType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2100"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
