@@ -8,7 +8,7 @@
         <xs:sequence>
             <xs:element name="lagnavn" type="xs:string"/>
             <xs:element name="møtelokale" type="AdresseType"/>
-            <xs:element name="leder" type="NavnType"/>
+            <xs:element name="leder" type="xs:positiveInteger"/>
             <xs:element name="medlemmer" type="MedlemmerType"/>
         </xs:sequence>
     </xs:complexType>
@@ -48,7 +48,7 @@
             <xs:element name="status" type="StatusType"/>
             <xs:element name="medlemsavgift" type="MedlemsavgiftType"/>
         </xs:sequence>
-        <xs:attribute name="mId" type="xs:string" use="required"/>
+        <xs:attribute name="mId" type="xs:positiveInteger" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="KontaktType">
@@ -73,17 +73,10 @@
 
     <xs:complexType name="ÅrType">
         <xs:simpleContent>
-            <xs:extension base="ÅrVerdiType">
+            <xs:extension base="xs:integer">
                 <xs:attribute name="betalt" type="xs:boolean" use="required"/>
-                <xs:attribute name="betalingsdato" type="xs:date"    use="optional"/>
+                <xs:attribute name="betalingsdato" type="xs:date" use="optional"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-
-    <xs:simpleType name="ÅrVerdiType">
-        <xs:restriction base="xs:int">
-            <xs:minInclusive value="1900"/>
-            <xs:maxInclusive value="2100"/>
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>

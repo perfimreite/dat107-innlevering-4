@@ -11,12 +11,11 @@
     </møtelokale>
 
     <leder>
-        <fornavn>Anne</fornavn>
-        <etternavn>Olsen</etternavn>
+        1
     </leder>
 
     <medlemmer>
-        <medlem mId="1001">
+        <medlem mId="1">
             <navn>
                 <fornavn>Kari</fornavn>
                 <etternavn>Nordmann</etternavn>
@@ -32,13 +31,13 @@
             </adresse>
             <status>aktiv</status>
             <medlemsavgift>
-                <år betalt="true" betalingsdato="2024-02-15">2026</år>
-                <år betalt="true" betalingsdato="2023-01-30">2025</år>
+                <år betalt="true" betalingsdato="2026-02-15">2026</år>
+                <år betalt="true" betalingsdato="2025-01-30">2025</år>
                 <år betalt="false">2024</år>
             </medlemsavgift>
         </medlem>
 
-        <medlem mId="1002">
+        <medlem mId="2">
             <navn>
                 <fornavn>Petter</fornavn>
                 <etternavn>Hansen</etternavn>
@@ -53,13 +52,13 @@
             </adresse>
             <status>aktiv</status>
             <medlemsavgift>
-                <år betalt="true" betalingsdato="2024-03-01">2026</år>
-                <år betalt="true" betalingsdato="2023-02-28">2025</år>
-                <år betalt="true" betalingsdato="2022-04-10">2024</år>
+                <år betalt="true" betalingsdato="2026-03-01">2026</år>
+                <år betalt="true" betalingsdato="2025-02-28">2025</år>
+                <år betalt="true" betalingsdato="2024-04-10">2024</år>
             </medlemsavgift>
         </medlem>
 
-        <medlem mId="1003">
+        <medlem mId="3">
             <navn>
                 <fornavn>Lisa</fornavn>
                 <etternavn>Johansen</etternavn>
@@ -76,7 +75,7 @@
             <medlemsavgift>
                 <år betalt="false">2026</år>
                 <år betalt="false">2025</år>
-                <år betalt="true" betalingsdato="2022-12-15">2024</år>
+                <år betalt="true" betalingsdato="2024-12-15">2024</år>
             </medlemsavgift>
         </medlem>
     </medlemmer>
